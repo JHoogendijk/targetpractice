@@ -17,7 +17,11 @@ app.on('ready', function()
 		width: width,
 		height: height,
 		frame: false,
-		alwaysOnTop: true
+		alwaysOnTop: true,
+		webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+		}
 	});
 
 	window.webContents.on('did-finish-load', function()
